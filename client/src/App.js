@@ -37,11 +37,13 @@ const App = () => {
         }
       />
       <Switch>
-        <Route
-          path="/movie/:pageId "
-          render={() => <Movie movies={movieList} />}
-        />
-        <Route path="/" render={() => <MovieList movies={movieList} />} />
+        <Route path="/movies/:pageId">
+          <Movie />
+        </Route>
+
+        <Route path="/">
+          <MovieList movies={movieList} />
+        </Route>
       </Switch>
     </div>
   );
