@@ -37,11 +37,13 @@ const App = () => {
         }
       />
       <Switch>
+        <Route
+          path="/movie/:pageId "
+          render={() => <Movie movies={movieList} />}
+        />
         <Route path="/" render={() => <MovieList movies={movieList} />} />
-        <Route path="/movie/:id " render={() => <Movie movies={movieList} />} />
       </Switch>
     </div>
   );
 };
-
 export default App;
